@@ -68,8 +68,8 @@ PurpleMine.HistoryTabs = (function () {
     var liEnd = '</a></li>'
 
     html += '<div class="tabs"><ul>'
-    html += liStart + 'selected ' + liMid + 'all">' + instance._.all + liEnd
-    html += liStart + liMid + 'notes">' + instance._.notes + liEnd
+    html += liStart + liMid + 'all">' + instance._.all + liEnd
+    html += liStart + 'selected ' + liMid + 'notes">' + instance._.notes + liEnd
     html += liStart + liMid + 'details">' + instance._.details + liEnd
     html += '</ul></div>'
 
