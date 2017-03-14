@@ -78,6 +78,8 @@ PurpleMine.HistoryTabs = (function () {
 
     instance.$tabs = instance.$tabsContainer.find('.history-tab')
     instance.$tabs.on('click', tabClick)
+
+    instance.$history.addClass('hide-details')
   }
 
   function markFirstOfTypes () {
