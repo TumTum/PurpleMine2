@@ -336,7 +336,7 @@ $tracker-default-colors-map: (
     color:                      $white
   )
 ) !default;
-$tracker-custom-colors-map:     (
+$tracker-custom-colors-map: (
   1: (
     background:             $brand-success,
     color:                  $brand-text
@@ -345,6 +345,26 @@ $tracker-custom-colors-map:     (
     background:             $brand-danger,
     color:                  $brand-text
   ),
+  5: ( // Support: Orange
+    background:                 $brand-warning,
+    color:                      $brand-text
+  ),
+  6: ( // Technik Pool: Grün
+    background:                 mix($brand-success, $brand-info, 50%),
+    color:                      $brand-text
+  ),
+  8: ( // Event Aufgabe: Grau-blau
+          background: rgba(60, 76, 118, 0.56),
+          color:                  $brand-text
+  ),
+  9: ( // Event Modul: Blau
+          background: #0b0bd1,
+          color:                  $brand-text
+  ),
+  10: ( // Event Wurzel: dunkelblau
+          background: #000f94,
+          color:                  $brand-text
+  )
 ) !default;
 $tracker-colors-map:            map-merge($tracker-default-colors-map, $tracker-custom-colors-map);
 
