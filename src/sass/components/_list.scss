@@ -442,8 +442,8 @@ tr.entry {
     padding: $tracker-list-padding;
 
     &::before {
-      content: "#";
       color: mix($tracker-default-text, $tracker-default-bg, 50%);
+      content: "RM# ";
     }
   }
 
