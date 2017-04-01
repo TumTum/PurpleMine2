@@ -336,35 +336,56 @@ $tracker-default-colors-map: (
     color:                      $white
   )
 ) !default;
-$tracker-custom-colors-map: (
-  1: (
-    background:             $brand-success,
-    color:                  $brand-text
+
+$tracker-custom-colors-map:     (
+  1: ( // Aufgabe
+          background: #2db503,
+          color: $brand-text
   ),
-  3: (
-    background:             $brand-danger,
-    color:                  $brand-text
+  4: ( // Unteraufgabe
+          background: #1116fa,
+          color: $brand-text
+  ),
+  5: ( // Support
+          background: #d01a18,
+          color: $brand-text
   ),
   5: ( // Support: Orange
-    background:                 $brand-warning,
-    color:                      $brand-text
+          background: $brand-warning,
+          color: $brand-text
   ),
   6: ( // Technik Pool: Grün
-    background:                 mix($brand-success, $brand-info, 50%),
-    color:                      $brand-text
+          background: mix($brand-success, $brand-info, 50%),
+          color: $brand-text
   ),
   8: ( // Event Aufgabe: Grau-blau
           background: rgba(60, 76, 118, 0.56),
-          color:                  $brand-text
+          color: $brand-text
   ),
   9: ( // Event Modul: Blau
           background: #0b0bd1,
-          color:                  $brand-text
+          color: $brand-text
   ),
   10: ( // Event Wurzel: dunkelblau
           background: #000f94,
-          color:                  $brand-text
-  )
+          color: $brand-text
+  ),
+  11: ( // Unteraufg.Vers.
+          background: #1116c7,
+          color: $brand-text
+  ),
+  12: ( // Materialstamm
+          background: #000,
+          color: $brand-text
+  ),
+  14: ( // Dispomaterial
+          background: #636363,
+          color: $brand-text
+  ),
+  15: ( // Obi Farben
+          background: #ff7e21,
+          color: #000
+  ),
 ) !default;
 $tracker-colors-map:            map-merge($tracker-default-colors-map, $tracker-custom-colors-map);
 
