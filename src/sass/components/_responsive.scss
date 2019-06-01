@@ -53,6 +53,7 @@
           font-size: $font-size-large;
           font-weight: $font-weight-normal;
           line-height: $responsive-header-height;
+          font-size: 1.4em;
 
           &::before {
             @include fa-icon;
