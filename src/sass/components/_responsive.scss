@@ -334,6 +334,13 @@
       }
     }
 
+    // tm http://localhost:8080/issues/3441
+    .tabular {
+      label {
+        float: left;
+      }
+    }
+
     #issue-changesets {
       div.changeset {
         padding: 0;
