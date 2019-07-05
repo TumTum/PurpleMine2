@@ -1,0 +1,29 @@
+// Ticket Anpassung: CSS für Banner anpassen #10024
+
+@mixin  wiki-class-button($bg) {
+  color:#fff;
+  background:$bg;
+  padding: 6px 12px;
+  border-radius:4px;
+  margin: 5px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.wiki-class-button {
+  &-dunkel {
+    @include wiki-class-button(#2D478C);
+  }
+
+  &-mittel {
+    @include wiki-class-button($brand-primary);
+  }
+
+  &-hell {
+    @include wiki-class-button($brand-accent);
+  }
+
+  &-rot {
+    @include wiki-class-button($brand-danger);
+  }
+}
