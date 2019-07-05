@@ -1,29 +1,82 @@
 // Ticket Anpassung: CSS für Banner anpassen #10024
 
-@mixin  wiki-class-button($bg) {
-  color:#fff;
-  background:$bg;
-  padding: 6px 12px;
-  border-radius:4px;
-  margin: 5px;
-  display: inline-block;
-  font-weight: bold;
+@mixin no_decoration {
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
 }
 
 .wiki-class-button {
+  color: #fff;
+  padding: 6px 12px;
+  border-radius:4px;
+  margin: {
+    top: 0;
+    left: 0;
+    right: 2px;
+    bottom: 5px;
+  }
+  display: inline-block;
+  font-weight: bold;
+
+  @include no_decoration();
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+  }
+
   &-dunkel {
-    @include wiki-class-button(#2D478C);
+    $color: #2D478C;
+    @extend .wiki-class-button;
+    @include button-variant(#fff, $color, darken($color, 80%));
+    @include no_decoration();
   }
 
   &-mittel {
-    @include wiki-class-button($brand-primary);
+    $color: $brand-primary;
+    @extend .wiki-class-button;
+    @include button-variant(#fff, $color, darken($color, 80%));
+    @include no_decoration();
   }
 
   &-hell {
-    @include wiki-class-button($brand-accent);
+    $color: #9B89CC;
+    @extend .wiki-class-button;
+    @include button-variant(#fff, $color, darken($color, 80%));
+    @include no_decoration();
   }
 
   &-rot {
-    @include wiki-class-button($brand-danger);
+    $color: #ee0000;
+    @extend .wiki-class-button;
+    @include button-variant(#fff, $color, darken($color, 80%));
+    @include no_decoration();
+  }
+
+  &-senf {
+    $color: #ffbf00;
+    @extend .wiki-class-button;
+    @include button-variant(#fff, $color, darken($color, 80%));
+    @include no_decoration();
+  }
+
+  &-gruen {
+    $color: #00bd00;
+    @extend .wiki-class-button;
+    @include button-variant(#fff, $color, darken($color, 80%));
+    @include no_decoration();
+  }
+
+  &-tuerkis {
+    $color: #16dea2;
+    @extend .wiki-class-button;
+    @include button-variant(#fff, $color, darken($color, 80%));
+    @include no_decoration();
   }
 }
