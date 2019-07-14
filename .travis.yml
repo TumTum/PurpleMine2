@@ -1,0 +1,26 @@
+dist: trusty
+language: node_js
+node_js: [8]
+cache:
+  directories:
+    - node_modules
+install:
+  - npm install
+script:
+  - npm run build
+before_deploy:
+  - rm -Rf node_modules
+deploy:
+  - provider: s3
+    access_key_id:
+      secure: "IVNplD3fFdZNl8S1TeZ+nzw4gMp69gdsQjbAqGtdM/NCHxipU8ooYKf/m22H3+veauOCtxEEI4DhAvpKVY5Qk1QTkghsladAC1rqDKUJ3y/CmPy8VJqoBejjXBaAmzAirLnXHRh74ffSnZgIxmq/rZMyLQefTMqRsLhPTTZPlsPAbBmEe7Ou0I39hsSQgBaf7VOxGpyJFhmAALN74e6hBOeIS3JrXHnX4zq0pU00GsC0fxymydwONzD6GLxPahiZwchIwE6rOroLJOuwSPuSCeWXbCq724HFTgk5HrsiVvUZ6br+SlFDCggU6UeTf5CyrPHvnRB28P5b6BLY35oJD/HkLPNEss7p0KkZNtxuam+ysnQIv2J73X+Ix4gJT/iNkDgTp6TmgtWLOn7cEwJq+57fwUWrLunWfBvSbovu35jCTA9/f3kGQKO3a0G2QLLF8+0onVtAVuWVdHjP/fqBd0Xj1JTx2iZZGcIB0IfHkKdJJ5+DLf3MyU1D91x8G8UhU3LKdxUq+X6oZdKu2FFb8sRC8+kyZCWMEU46SUquu/5E6mMYc1uJJh21NTKbSHmNrfZfvGWITx3Oi8GjoVrzNuvs0asmdmT1GXyUysCXDFq0KJ+d8LNZdb3ZidBp8S7E2/RwtYLulJGYlPiSehkUgx9oTZcoJMmtV8Ac8V3C9dE="
+    secret_access_key: "$AWS_SKEY"
+    bucket:
+      secure: "lVtLveAuYmCo0qdNTfNEEuKW94VOy/54u9A+a1oaLPoC+aKKFXE4HEdRlBP3bEZGendM3b0l6ZAdP7pTw0fR3HcQtXB3EmoH9aK9ISXiaUZEIA+s+ElFyZ62mjSRS6PpGyoZMOC7ouo0jg0PRIOP7Rjc6rd3preID6krRoUSLUk4wc3h4lDjhU6FSn43Pq+8bkQCNz3rZqBY9l9u+QlvU3rupnZxFmGnuElDuqXWV58NlhgeglD+RaLspgNqNzmzbOOs8jvA4sIxkBDce5urISlftrfdnFy2p5Tk5z8K5mtO3O7OZ4jDDqdrEFzimCud1wBpcIFwd0UgOdmnFFcirZ6Pk0w5/M6Ji/+tyGj2QiefRvn274j294e8p0yLop+PWqWkkhvEHr2mbD2fb/FbPnqjGO8haezCLJ1eo7yWkEym6+eFUaxlLeusjnLwm3HvCVsVLAM1W88VrznFdy1ySDG4yz8+XzRz6xsK6Bbp22OuclTvXnNtdNAegv3uXZ1sl6pMm4eCV5QBJj7OtzhF5GOwJuiz2hgzLbPe7YuVHeHGKQYI3I3PK4YMzUs9nkGAmbp1m84kUerUN9nts+Znt+7UL0bA2BUhDzP8i/7KixyOIhO5xX78HQ77UiPIW/fgralYY2s8MYfYfFAtoQILExEynBWWYSxQ1TYSDRbjuZM="
+    region: "eu-west-1"
+    skip_cleanup: true
+    upload-dir: "PurpleMine2"
+    on:
+      branch: finalStyle
+after_deploy:
+  - ./bin/deployme.sh

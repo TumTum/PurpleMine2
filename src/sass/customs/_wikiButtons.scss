@@ -79,4 +79,11 @@
     @include button-variant(#fff, $color, darken($color, 80%));
     @include no_decoration();
   }
+
+  &-pink {
+    $color: #de90cb;
+    @extend .wiki-class-button;
+    @include button-variant(#54002e, $color, darken($color, 80%));
+    @include no_decoration();
+  }
 }
