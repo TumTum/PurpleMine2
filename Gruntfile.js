@@ -2,6 +2,8 @@ module.exports = function (grunt) {
   grunt.initConfig({
     src: 'src/',
 
+    APPLICATION_CSS: grunt.option('style_name') || 'application.css',
+
     sass: {
       options: {
         implementation: require('node-sass'),
@@ -17,7 +19,7 @@ module.exports = function (grunt) {
 
       theme: {
         files: {
-          'stylesheets/application.css': '<%= src %>sass/application.scss'
+          'stylesheets/<%= APPLICATION_CSS %>': '<%= src %>sass/application.scss'
         }
       },
 

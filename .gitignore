@@ -4,3 +4,5 @@
 /.sublime-grunt.cache
 /images/logo
 /.stylelintcache
+!/stylesheets/application.css
+/stylesheets
