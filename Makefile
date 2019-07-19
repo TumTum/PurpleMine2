@@ -10,7 +10,7 @@ help: ## This help.
 
 install: ## Einmaliger schritt um die node module zu installieren
 	@echo "Installiere npm Module"
-	@docker run -it --rm -v $$(pwd):/data digitallyseamless/nodejs-bower-grunt:latest npm install
+	@npm install
 
 chrome_same_path: ## Für Google Chrome muss die Ordner Stucktur die selbe sein
 	@src_code=$$(basename $$(pwd)) &&\
@@ -32,11 +32,11 @@ build: ## Erstellt application.css
 	@if [ ! -d node_modules ]; then\
 		make install;\
 	fi
-	@docker run -it --rm -v $$(pwd):/data digitallyseamless/nodejs-bower-grunt:latest grunt default
+	@grunt default
 
 watch: ## Beobachtet die css Dateien
 	@if [ ! -d node_modules ]; then\
 		make install;\
 	fi
 	@read -p "Welches Timestamp hat application.css?111111? " TIME;\
-	 docker run -it --rm -v $$(pwd):/data digitallyseamless/nodejs-bower-grunt:latest grunt --style_name=application.css%3F$$TIME watch
+	 grunt --style_name=application.css%3F$$TIME watch
