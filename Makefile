@@ -10,7 +10,7 @@ help: ## This help.
 
 install: ## Einmaliger schritt um die node module zu installieren
 	@echo "Installiere npm Module"
-	@npm install
+	@npm audit fix
 
 chrome_same_path: ## Für Google Chrome muss die Ordner Stucktur die selbe sein
 	@src_code=$$(basename $$(pwd)) &&\
