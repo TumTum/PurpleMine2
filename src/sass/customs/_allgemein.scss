@@ -10,3 +10,10 @@
 .text_cf {
   height: 100px;
 }
+
+//Ticket: #10412 Hervorheben nächster schritt
+.highlightNextStep,
+.issue.details .attributes .cf_161 {
+  background-color: #9b89cc2b;
+  border-radius: 4px;
+}
