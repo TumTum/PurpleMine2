@@ -12,7 +12,7 @@ install: ## Einmaliger schritt um die node module zu installieren
 	@echo "Installiere npm Module"
 	@npm audit fix
 
-chrome_same_path: ## Für Google Chrome muss die Ordner Stucktur die selbe sein
+chrome_same_path: ## Für Google Chrome vorbereitung der Ordner Stucktur die selbe sein
 	@src_code=$$(basename $$(pwd)) &&\
 	 chrompfad="Development/www.ldc-ticket.org/themes/PurpleMine2" &&\
 	 protect=$$(pwd) &&\
