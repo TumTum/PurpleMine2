@@ -253,6 +253,30 @@ $status-colors-map:             map-merge($status-default-colors-map, $status-cu
 //== Trackers priorities
 //
 
+// Altest wiedergestellt weil in v2 wurde diese Idee verworfen
+$color-priorities:              true !default;
+
+$priority-lowest-bg:            #dff4d0 !default;
+$priority-lowest-text:          #676 !default;
+$priority-lowest-link:          #096 !default;
+
+$priority-default-bg:           #fff !default;
+$priority-default-text:         $text-color !default;
+$priority-default-link:         $link-color !default;
+
+$priority-high3-bg:             #d5eaff !default;
+$priority-high3-text:           #556 !default;
+$priority-high3-link:           #05a !default;
+
+$priority-high2-bg:             #ffe1d7 !default;
+$priority-high2-text:           #855 !default;
+$priority-high2-link:           #b04 !default;
+
+$priority-highest-bg:           #ffa5a5 !default;
+$priority-highest-text:         #944 !default;
+$priority-highest-link:         #a03 !default;
+//End
+
 $priority-icon-size:            14px !default;
 $priority-icon-space:           5px !default;
 $priority-default-icons-map: (

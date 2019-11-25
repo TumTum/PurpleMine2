@@ -368,6 +368,17 @@ tr.entry {
 //== Priorities
 //
 
+//tm Altest wiedergestellt weil in v2 wurde diese Idee verworfen
+@if $color-priorities {
+  // scss-lint:disable SpaceAfterComma
+  @include priority(".priority-lowest", $priority-lowest-bg, $priority-lowest-text, $priority-lowest-link);
+  @include priority(".priority-default", $priority-default-bg, $priority-default-text, $priority-default-link);
+  @include priority(".priority-high3", $priority-high3-bg, $priority-high3-text, $priority-high3-link);
+  @include priority(".priority-high2", $priority-high2-bg, $priority-high2-text, $priority-high2-link);
+  @include priority(".priority-highest", $priority-highest-bg, $priority-highest-text, $priority-highest-link);
+}
+//tm  ende
+
 @if $priority-icon {
   table.list tbody tr {
     .priority {
