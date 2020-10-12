@@ -17,3 +17,8 @@
   background-color: #9b89cc2b;
   border-radius: 4px;
 }
+
+// Ticket: #11071 Tracker 8B Erledigt Status nicht durchstreichen
+a.issue.tracker-32.closed::after{
+  display: none;
+}

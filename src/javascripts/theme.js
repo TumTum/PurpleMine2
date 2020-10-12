@@ -7,4 +7,6 @@ $(function () {
   new PurpleMine.HistoryTabs()
   new PurpleMine.MenuCollapse()
   new PurpleMine.zFetchDom();
+  // Customs
+  new CustomPurpleMine.CommentDateCustomizer()
 })

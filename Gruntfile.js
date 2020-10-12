@@ -56,6 +56,7 @@ module.exports = function (grunt) {
       theme: {
         src: [
           '<%= src %>javascripts/modules/*.js',
+          '<%= src %>javascripts/customs/*.js',
           '<%= src %>javascripts/theme.js'
         ],
         dest: 'javascripts/theme.js'

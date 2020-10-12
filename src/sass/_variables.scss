@@ -416,6 +416,14 @@ $tracker-custom-colors-map: (
   20: (// Einwilligung_DSG
     background: #0c59ae,
     color: #fed230
+  ),  
+  23: (// KRS-Grunddaten
+    background: #b84000, 
+    color: #fff
+  ),
+  32: (// KRS-Raum (MT)
+    background: #b84000, 
+    color: #fff
   ),
 ) !default;
 $tracker-colors-map:            map-merge($tracker-default-colors-map, $tracker-custom-colors-map);
